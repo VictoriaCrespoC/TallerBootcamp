@@ -1,0 +1,119 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: rgb(129, 31, 31);
+  margin: 0;
+}
+
+.genero-container {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  padding-bottom: 15px;;
+}
+
+/*En el script de java he creado un div con la clase pelicula, con esto puedo modificar el aspecto de nuestra página*/
+h1{
+  color: red;
+  background-color: rgb(28, 9, 2);
+  font-size: xx-large;
+  font-weight: black;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  margin-top: 0px;
+  width: 100%;
+  border: 0px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.genero-container{
+  color: beige;
+  background-color: rgb(44, 23, 16);
+  width: 100%;
+  border: 0px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+h2{
+  font-size: x-large;
+  margin-left: 20px;
+}
+
+/*modificar imagenes*/
+.carrusel {
+    position: relative;
+    width: 100%;
+}
+
+.genero {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 15px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  scroll-behavior: smooth; /*podria modificarlo tb en java script con scrollBy({behavior:smooth})*/
+  width: 100%;
+  padding: 15px 5px;
+} /*con esto las oingo todas en la misma linea dentro de su contenedor*/
+
+.genero::-webkit-scrollbar {
+    display: none;
+}
+.flechaizq, .flechader {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    width: 40px;
+    height: 60px;
+
+    border: none;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
+
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.flechaizq:hover {
+    background: rgba(0, 0, 0, 0.85);
+}
+.flechader:hover {
+    background: rgba(0, 0, 0, 0.85);
+}
+.flechaizq {
+    left: 5px;
+}
+
+.flechader {
+    right: 35px;
+}
+
+.pelicula {
+    flex: 0 0 130px;
+    width: 130px;
+} /*Evitar que se pisen los titulos. Flex: no crecer para ocupar espacio sobrante, no encogerse y tamaño inicial*/ 
+
+.pelicula img {
+  width: 100%;
+  height:auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.pelicula h3{
+  font-size: 14px;
+  text-align: center;
+  overflow-wrap: break-word; /*parte una palabra si no entra*/
+}
